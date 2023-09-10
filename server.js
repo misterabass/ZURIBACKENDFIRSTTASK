@@ -14,10 +14,13 @@ app.get('/api', (req, res) => {
 
     const currentUTCTime = new Date().toISOString()
 
+    const formattedUTCTime = currentUTCTime.split('.')[0] + 'Z';
+
+
     const response = {
         slack_name: 'misterabass',
         current_day: currentDay,
-        utc_time: currentUTCTime,
+        utc_time: formattedUTCTime,
         track: 'backend',
         github_file_url: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK/blob/master/server.js', 
         github_repo_url: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK',
