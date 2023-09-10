@@ -15,12 +15,12 @@ app.get('/api', (req, res) => {
     const currentUTCTime = new Date().toISOString()
 
     const response = {
-        misterabass,
+        slackName: 'misterabass',
         current_day: currentDay,
         UTCtime: currentUTCTime,
-        Backend,
-        githubFileUrl:  
-        githubRepoUrl:
+        track: 'backend',
+        githubFileUrl: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK/blob/master/server.js', 
+        githubRepoUrl: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK',
         statusCode: 200
     }
 
