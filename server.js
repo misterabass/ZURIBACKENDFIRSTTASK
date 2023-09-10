@@ -17,11 +17,11 @@ app.get('/api', (req, res) => {
     const response = {
         slack_name: 'misterabass',
         current_day: currentDay,
-        UTCtime: currentUTCTime,
+        utc_time: currentUTCTime,
         track: 'backend',
-        githubFileUrl: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK/blob/master/server.js', 
-        githubRepoUrl: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK',
-        statusCode: 200
+        github_file_url: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK/blob/master/server.js', 
+        github_repo_url: 'https://github.com/misterabass/ZURIBACKENDFIRSTTASK',
+        status_code: 200
     }
 
     res.json(response)
