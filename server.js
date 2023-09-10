@@ -3,10 +3,10 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/api', (req, res) => {
-    const { slackName, track } = req.query
+    const { slack_name, track } = req.query
 
     if(!slackName || !track){
-        return res.status(400).json({ error: 'Both slackName and track parameters are required'})
+        return res.status(400).json({ error: 'Both slack_name and track parameters are required'})
     }
 
     const dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday, "Friday', 'Saturday']
@@ -15,7 +15,7 @@ app.get('/api', (req, res) => {
     const currentUTCTime = new Date().toISOString()
 
     const response = {
-        slackName: 'misterabass',
+        slack_name: 'misterabass',
         current_day: currentDay,
         UTCtime: currentUTCTime,
         track: 'backend',
