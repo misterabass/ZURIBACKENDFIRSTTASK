@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000
 app.get('/api', (req, res) => {
     const { slack_name, track } = req.query
 
-    if(!slackName || !track){
+    if(!slack_name || !track){
         return res.status(400).json({ error: 'Both slack_name and track parameters are required'})
     }
 
